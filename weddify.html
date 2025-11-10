@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weddify_Me — Online Wedding & Event Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f1724;--card:#0f2130;--muted:#9fb0c8;--accent:#ff8fb2;--accent-2:#ffd27e;--glass: rgba(255,255,255,0.04);--glass-2: rgba(255,255,255,0.02);--radius:18px;--max-width:1100px;--shadow: 0 10px 30px rgba(2,6,23,0.6);
+    }
+    html,body{height:100%;background:linear-gradient(180deg,var(--bg) 0%, #071024 100%);color:#e6f0fb;font-family:'Plus Jakarta Sans',system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+    header{position:sticky;top:12px;z-index:40}
+    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:12px;border-radius:14px;box-shadow:var(--shadow);backdrop-filter: blur(6px)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(255,140,177,0.16)}
+    .brand h1{font-family:'Pacifico';font-size:20px;color:#fff}
+    .brand span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+    .nav-links{display:flex;gap:12px;align-items:center}
+    .nav-links a{padding:8px 12px;border-radius:10px;color:var(--muted);font-weight:600}
+    .nav-links a.cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#071024}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:36px 0}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .eyebrow{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:6px 10px;border-radius:999px;color:#071024;font-weight:700;font-size:12px}
+    h2{font-size:34px;margin-top:12px;line-height:1.02}
+    p.lead{color:var(--muted);margin-top:12px}
+    .hero-cta{margin-top:18px;display:flex;gap:10px}
+    .btn{padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer;border:0}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#071024}
+    .illustration{background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:18px;display:flex;align-items:center;justify-content:center}
+    .cards-section{margin-top:40px}
+    .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin-top:20px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(15,33,48,0.6));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.02)}
+    .card h3{font-size:18px;color:#fff;margin-bottom:10px}
+    .card img{border-radius:10px;margin-bottom:10px}
+    .muted{color:var(--muted);font-size:14px;margin-top:8px}
+    footer{margin-top:36px;padding:20px;border-radius:14px;background:linear-gradient(180deg,var(--glass),transparent)}
+    .flex{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="nav">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <h1>Weddify_Me</h1>
+            <span>Online Wedding & Event Cards</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#cards">Cards</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" id="open-book">Order Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <span class="eyebrow">Digital Event Cards</span>
+        <h2>Create Unique Wedding, Birthday & Engagement Cards Online</h2>
+        <p class="lead">Weddify_Me lets you design personalized cards online with beautiful templates and animations. Share instantly via WhatsApp or email!</p>
+        <div class="hero-cta">
+          <button class="btn primary" id="book-now">Start Designing</button>
+        </div>
+      </div>
+      <div class="illustration">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Wedding cards illustration" />
+      </div>
+    </section>
+
+    <section id="cards" class="cards-section">
+      <h2>Explore Our Cards</h2>
+      <p class="muted">Select from our collection of online wedding, birthday, and engagement cards.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?q=80&w=600" alt="Wedding Card">
+          <h3>Wedding Card</h3>
+          <p class="muted">Elegant designs with traditional and modern themes.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=600" alt="Birthday Card">
+          <h3>Birthday Card</h3>
+          <p class="muted">Colorful and fun birthday cards to surprise your loved ones.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=600" alt="Engagement Card">
+          <h3>Engagement Card</h3>
+          <p class="muted">Celebrate your love story with romantic engagement invites.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:40px">
+      <h2>Contact Us</h2>
+      <p class="muted">For orders and inquiries, reach out at <a href="mailto:weddifyme66@gmail.com" style="color:var(--accent)">weddifyme66@gmail.com</a></p>
+    </section>
+
+    <footer>
+      <div class="flex">
+        <div>
+          <strong>Weddify_Me</strong>
+          <div class="muted">© <span id="year"></span> • Online Wedding & Event Cards</div>
+        </div>
+        <div class="muted">Mail: weddifyme66@gmail.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('book-now').addEventListener('click',()=>{
+      window.location.href='mailto:weddifyme66@gmail.com?subject=Card%20Design%20Request&body=Hello%20Weddify_Me%2C%20I%27d%20like%20to%20create%20a%20custom%20card.';
+    });
+  </script>
+</body>
+</html>
